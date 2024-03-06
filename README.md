@@ -48,7 +48,7 @@ EOF  help  quit
 (hbnb) 
 (hbnb) quit
 $
-
+```
 ## But also in non-interactive mode: (like the Shell project in C)
 
 ```bash
@@ -77,7 +77,7 @@ $
 
 - console.py - the console contains the entry point of the command interpreter. List of commands this console current supports:
 
-- EOF - exits console
+- `EOF` - exits console
 - quit - exits console
 - <emptyline> - overwrites default emptyline method and does nothing
 - create - Creates a new instance ofBaseModel, saves it (to the JSON file) and prints the id

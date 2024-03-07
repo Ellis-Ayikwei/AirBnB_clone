@@ -91,6 +91,7 @@ $
 
 ## Authors
 Ayako James
+Ellis Armah Ayikwei
 
 ## License
 Public Domain. No copy write protection.

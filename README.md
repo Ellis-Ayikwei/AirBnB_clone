@@ -90,8 +90,8 @@ $
 - base_model.py - The BaseModel class from which future classes will be derived
 
 ## Authors
-Ayako James
-Ellis Armah Ayikwei
+Ayako James.
+Ellis Armah Ayikwei.
 
 ## License
 Public Domain. No copy write protection.

@@ -28,8 +28,10 @@ Attributes:
 
     def save(self):
         """ saves objects into json file thats the ___file_path"""
-        odict = FileStorage.__objects
-        obj_dict = {obj: odict[obj].to_dict() for obj in odict.keys()}
+        pdict = FileStorage.__objects
+        obj_dict = {obj: pdict[obj].to_dict()
+                    for obj in pdict.keys() 
+                    if isinstance(pdict[obj], BaseModel)}
         with open(FileStorage.__file_path, 'w') as f:
             json.dump(obj_dict, f)
 

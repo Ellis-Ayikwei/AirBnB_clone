@@ -1,28 +1,30 @@
 #!/usr/bin/python3
-"""defines a class for the HBNB console"""
+"""Entry point of the command interpreter:"""
+
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
-    """Handles the HBNB command-line interface."""
-    
-    prompt="(hbnb)"
+    """Defines the command interpreter
+
+    Attributes:
+        prompt (str): The command prompt
+    """
+
+    prompt = "(hbnb)"
+
+    def emptyline(self):
+        """Do nothing upon receiving an empty line"""
+        pass
 
     def do_quit(self, arg):
-        """ quite the console"""
+        """Quit command to exit the program."""
         return True
-    
+
     def do_EOF(self, arg):
-        """Exit on End Of File."""
+        """EOF signal to exit the program."""
         print("")
         return True
-    
-    
-    
-    
-    
-    
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     HBNBCommand().cmdloop()
-    
-
-

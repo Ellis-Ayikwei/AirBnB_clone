@@ -2,6 +2,7 @@
 """defines a class for the HBNB console"""
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 from shlex import split
 import re
@@ -27,7 +28,8 @@ class HBNBCommand(cmd.Cmd):
     """Handles the HBNB command-line interface."""
     
     prompt="(hbnb) "
-    classes = ["BaseModel"]
+    classes = ["BaseModel",
+                "User"]
 
     def do_quit(self, arg):
         """ quite the console"""

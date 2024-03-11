@@ -12,7 +12,7 @@ class BaseModel:
         """initialize a new BaseModel
         
         Args:
-           *args(any) : not used 
+           *args(any) : not used
            **kwargs(dict) : Key/value pairs of attributes
         
         """
@@ -25,7 +25,7 @@ class BaseModel:
                 if key == "created_at" or key =="updated_at":
                     self.__dict__[key] = datetime.strptime(value,timeformat)
         else:
-            self.id = str(uuid4())  
+            self.id = str(uuid4())
             self.created_at = datetime.now()
             models.storage.new(self)
         
@@ -45,7 +45,7 @@ class BaseModel:
     def to_dict(self):
         """A function that returns the dic"""
         ret_dict = self.__dict__.copy()
-        ret_dict["created_at"] = ret_dict["created_at"].isoformat()  
+        ret_dict["created_at"] = ret_dict["created_at"].isoformat()
         ret_dict["__class__"] = self.__class__.__name__
-        ret_dict["updated_at"] = ret_dict["updated_at"].isoformat()  
+        ret_dict["updated_at"] = ret_dict["updated_at"].isoformat()
         return ret_dict

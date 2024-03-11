@@ -2,9 +2,8 @@
 """
 Contains class BaseModel
 """
-
-from datetime import datetime
 import models
+from datetime import datetime
 import uuid
 
 time = "%Y-%m-%dT%H:%M:%S.%f"
@@ -28,7 +27,7 @@ class BaseModel:
             if hasattr(self, "created_at") and type(self.created_at) is str:
                 self.created_at = datetime.strptime(kwargs["created_at"], time)
             if hasattr(self, "updated_at") and type(self.updated_at) is str:
-                self.updated = datetime.strptime(kwargs["updated_at"], time)
+                self.updated_at = datetime.strptime(kwargs["updated_at"], time)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()

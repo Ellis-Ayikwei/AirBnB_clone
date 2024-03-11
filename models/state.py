@@ -1,9 +1,13 @@
+#!/usr/bin/python3
+"""Contains class state"""
+
 from models.base_model import BaseModel
-"""Defines the state model class"""
 
 
+class State(BaseModel):
+    """Represents a state
 
-class State(Basemodel):
-    """represents the state class"""
-    name = str("")
-    
+    Attributes:
+        name (str): name of a state
+    """
+    name = ""

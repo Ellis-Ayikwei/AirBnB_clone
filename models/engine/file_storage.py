@@ -19,7 +19,7 @@ Attributes:
 
     def all(self):
         """ returns the dictionary ___objects """
-        return FileStorage.__objects
+        return self.__objects
 
     def new(self, obj):
         """ sets in ___objects the obj with key <obj class name>.id """
@@ -38,7 +38,10 @@ Attributes:
     def reload(self):
         """Deserialize the JSON file ___file_path to ___objects, if it exists."""
         try:
-            with open(FileStorage.__file_path) as f:
-                FileStorage.__objects = json.load(f)  
+             with open(self.__file_path, 'r') as f:
+                dict = json.loads(f.read())
+                for value in dict.values():
+                    cls = value["__class__"]
+                    self.new(eval(cls)(**value))
         except FileNotFoundError:
             return

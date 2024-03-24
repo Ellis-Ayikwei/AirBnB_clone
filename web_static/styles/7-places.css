@@ -12,6 +12,12 @@
 	width: 390px;
 }
 
+.places> .places-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* Header 1 style */
 .places h1 {

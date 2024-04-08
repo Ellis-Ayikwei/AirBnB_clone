@@ -1,0 +1,145 @@
+/* boxed list structure of places */
+.places {
+	text-align: center;
+}
+.places h1 {
+	font-size: 30px;
+	text-align: left;
+}
+article {
+	width: 390px;
+	border: 1px solid #ff5a5f;
+	border-radius: 4px;
+	padding: 20px;
+	margin: 20px;
+	display: inline-block;
+	min-height: 250px;
+	vertical-align: top;
+	position: relative;
+}
+article h2 {
+	font-size: 30px;
+	margin-top: 5px;
+}
+/* structure within boxed lists of places */
+.price_by_night {
+	color: #ff5a5f;
+	border: 4px solid #ff5a5f;
+	border-radius: 100%;
+	min-width: 60px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 30;
+	right: 10px;
+	top: 10px;
+
+	margin-bottom: 10px;
+	position: absolute;
+
+	padding: 5px;
+}
+.information {
+	height: 80px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	align-items: center;
+	flex: 1 0 100%;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+.places .reviews li{
+	list-style: none;
+}
+.places .amenities li {
+	list-style:none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+
+	
+}
+
+.places .amenities{
+	text-align: left;
+	margin-top:40px;
+}
+
+.places .reviews ul,
+.places .amenities ul{
+	margin-left: 0px;
+	padding: 0;
+}
+
+.places .amenities li > .tv{
+	background-image: url("../images/icon_tv.png");
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px 20px;
+	margin: 5px;
+	
+}
+.places .amenities li > .wifi{
+	background-image: url("../images/icon_wifi.png");
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px 20px;
+	margin: 5px;
+	
+}
+.places .amenities li > .pet-friendly{
+	background-image: url("../images/icon_pets.png");
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px 20px;
+	margin: 5px;
+	
+}
+.places .reviews h2,
+.places .amenities h2 {
+	font-size: 16px;
+	border-bottom: 1px solid #dddddd;
+
+}
+
+.places .reviews {
+	text-align: left;
+}
+
+.places .reviews h3 {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.places .reviews p {
+	margin: 0;
+	font-size: 12px;
+}
+
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+	line-height: 140px;
+	width: 100px;
+	height: 100%;
+	display: inline-block;
+	background-position: 50% 5px;
+	background-repeat: no-repeat;
+}
+.max_guest {
+	background-image: url("../images/icon_group.png");
+}
+.number_rooms {
+	background-image: url("../images/icon_bed.png");
+}
+.number_bathrooms {
+	background-image: url("../images/icon_bath.png");
+}
+.user,
+.description {
+	text-align: left;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
